@@ -1,0 +1,23 @@
+{
+  "name": "00_generic-react-client--express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main":"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+
+    "dev:backend": "npm --prefix ./server run dev",
+    "dev:frontend": "npm --prefix ./client run dev",
+
+    "build:backend": "npm --prefix ./server run build",
+    "build:frontend": "npm --prefix ./client run build",
+
+    "dev": "concurrently 'npm:dev:backend' 'npm:dev:frontend'",
+    "build": "npm run build:backend & npm run build:frontend"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrent": "^0.3.2"
+  }
+}
