@@ -18,12 +18,12 @@ app.use(express.json());
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header("Content-Security-Policy","self")
+    res.header('Content-Security-Policy', "img-src 'self'");
     next();
   });
 
  app.get('/', function (req, res, next) {
-   res.sendFile('index.html');
+   res.sendFile(__dirname + '/client/index.html');
    next()
  });
 
