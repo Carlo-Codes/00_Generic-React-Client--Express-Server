@@ -12,6 +12,6 @@ services:
        source: ./
        target: /srv/app
    tty: true
-   command: ["/bin/sh", "entrypoint.sh"]
+   command: entrypoint.sh
    
    
