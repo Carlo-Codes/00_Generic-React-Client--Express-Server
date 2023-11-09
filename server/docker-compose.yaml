@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+ vite_docker:
+   image: node:alpine
+   container_name: server_dev_container
+   entrypoint: /bin/sh
+   ports:
+     - 7000:7000
+   working_dir: /srv/app
+   volumes:
+     - type: bind
+       source: ./
+       target: /srv/app
+   tty: true
+   command: 
+    "npm run dev"

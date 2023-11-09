@@ -3,6 +3,6 @@ WORKDIR /app
 COPY server/package.json . 
 RUN npm install -g
 COPY . .
-EXPOSE 8000
+EXPOSE 7000
 CMD ["node", "server/main.js"]
 

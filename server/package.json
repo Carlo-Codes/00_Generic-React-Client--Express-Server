@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc & @powershell copy ./package.json ../dist/server/package.json &  @powershell copy ./.env ../dist/server/",
-    "dev": "npx nodemon ./server/main.ts"
+    "dev": "npx nodemon ./server/main.ts",
+    "docker:dev": "docker-compose up --build --no-recreate -d"
+    
   },
   "author": "",
   "license": "ISC",
