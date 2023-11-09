@@ -12,5 +12,4 @@ services:
        source: ./
        target: /srv/app
    tty: true
-   command: 
-    "npm run dev"
+   command: entrypoint.sh

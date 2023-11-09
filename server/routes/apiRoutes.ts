@@ -8,6 +8,6 @@ let router = express.Router()
 //router.use(AuthController.verifyAccessToken)//for authing
 
 //Endpoints//
-router.post("/ping", Controller.ping)
+router.get("/ping", Controller.ping)
 
 export default router
