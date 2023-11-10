@@ -23,7 +23,7 @@ app.use(function(req, res, next) {
   });
 
  app.get('/', function (req, res, next) {
-   res.sendFile(__dirname + '/client/index.html');
+   res.sendFile(__dirname + 'index.html');
    next()
  });
 
