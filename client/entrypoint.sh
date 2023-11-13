@@ -1,3 +1,3 @@
-ls
-npm install -g 
+npm install -g
+npm install
 npm run dev

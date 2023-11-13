@@ -6,10 +6,10 @@ services:
    entrypoint: /bin/sh
    ports:
      - 8000:8000
-   working_dir: /srv/app
+   working_dir: /srv/app/server
    volumes:
      - type: bind
        source: ./
        target: /srv/app
    tty: true
-   command: entrypoint.sh
+   command: ../entrypoint.sh
