@@ -1,6 +1,6 @@
 version: "3.4"
 services:
- vite_docker:
+ server:
    image: node:alpine
    container_name: server_dev_container
    entrypoint: /bin/sh
@@ -13,3 +13,17 @@ services:
        target: /srv/app
    tty: true
    command: entrypoint.sh
+
+ db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - 5432:5432
+
+ adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
